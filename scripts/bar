@@ -19,7 +19,8 @@ cpu() {
 pkg_updates() {
   #updates=$({ timeout 20 doas xbps-install -un 2>/dev/null || true; } | wc -l) # void
   #updates=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l) # arch
-  updates=$({ timeout 20 aptitude search '~U' 2>/dev/null || true; } | wc -l)  # apt (ubuntu, debian etc)
+  updates=$(apt search "~U" | wc -l 2> /dev/null)  # apt (ubuntu, debian etc)
+  # updates=$({ timeout 20 aptitude search '~U' 2>/dev/null || true; } | wc -l)  # apt (ubuntu, debian etc)
 
   if [ -z "$updates" ]; then
     printf "  ^c$green^ 󰦘  Fully Updated"
@@ -40,7 +41,7 @@ battery() {
 }
 
 brightness() {
-  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^%.0f\n" "$(cat /sys/class/backlight/*/brightness) "
+  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^ $(cat /sys/class/backlight/*/brightness) "
   # printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
