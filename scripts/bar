@@ -36,8 +36,8 @@ pkgs() {
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
   case "$(cat /sys/class/power_supply/BAT1/status 2> /dev/null)" in
-    Discharging) printf "^c$red^ ^b$white^ 󰂃 ^d^%s" " ^c$white^ ^b$red^ $get_capacity% Discharging";;
-    "Not charging") printf "^c$yellow^ ^b$darkblue^ 󰂃 ^d^%s" " ^c$yellow^ $get_capacity% Not charging";;
+    Discharging) printf "^c$grey^ ^b$red^ 󰂃 ^d^%s" " ^c$red^ $get_capacity% Discharging";;
+    "Not charging") printf "^c$yellow^ ^b$grey^ 󰂃 ^d^%s" " ^c$yellow^ $get_capacity% Not charging";;
     Charging) printf "^c$green^ ^b$grey^ 󱊥 ^d^%s" " ^c$green^ $get_capacity% Charging";;
     Unknown) printf "^c$red^ ^b$white^ 󰂑 ^d^%s" " ^c$red^ $get_capacity% Unknown";;
   esac
