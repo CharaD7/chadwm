@@ -24,7 +24,7 @@ pkg_updates() {
   if [ -z "$updates" ]; then
     printf "  ^c$green^ 󰦘  Fully Updated"
   else
-    printf "  ^c$black^ ^b$yellow^ 󰦗  ^d^%s" "^c$yellow^ $updates pkgs"
+    printf "  ^c$black^ ^b$yellow^ 󰦗 ^d^%s" "^c$yellow^ $updates pkgs"
   fi
 }
 
@@ -35,12 +35,12 @@ battery() {
     "Not charging") printf "^c$black^ ^b$yellow^ 󰂃 ^d^%s" " ^c$yellow^ $get_capacity% Not charging";;
     Charging) printf "^c$black^ ^b$green^ 󱊥 ^d^%s" " ^c$green^ $get_capacity% Charging";;
     Unknown) printf "^c$white^ ^b$red^ 󰂑 ^d^%s" " ^c$red^ $get_capacity% Unknown";;
-    Full) printf "^c$white^ ^b$green^ 󱟢 ^d^%s" " ^c$white^ $get_capacity% Fully charged";;
+    Full) printf "^c$black^ ^b$blue^ 󱟢 ^d^%s" " ^c$white^ $get_capacity% Fully charged";;
   esac
 }
 
 brightness() {
-  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^%.0f\n $(cat /sys/class/backlight/*/brightness) "
+  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^%.0f\n" "$(cat /sys/class/backlight/*/brightness) "
   # printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
