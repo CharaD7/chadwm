@@ -7,4 +7,5 @@ xset r rate 200 50 &
 picom &
 
 ~/.config/chadwm/scripts/bar.sh &
+~/.config/chadwm/scripts/bubbles.sh &
 while type dwm >/dev/null; do dwm && continue || break; done
