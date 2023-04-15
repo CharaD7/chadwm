@@ -28,6 +28,11 @@ pkg_updates() {
   fi
 }
 
+pkgs() {
+  pkgs="$(apt  list --installed | wc -l)"
+  printf "^c$yellow^   $pkgs"
+}
+
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
   printf "^c$blue^   $get_capacity"
