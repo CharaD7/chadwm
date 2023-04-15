@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int default_border = 0;   /* to switch back to default border after dynamic border resizing via keybinds */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
@@ -47,10 +47,10 @@ static const char *colors[][3]      = {
     /*                     fg       bg      border */
     [SchemeNorm]       = { gray3,   black,  gray2 },
     [SchemeSel]        = { gray4,   blue,   blue  },
-    [SchemeTitle]      = { white,   black,  black  }, // active window title
+    [SchemeTitle]      = { white,   black,  blue  }, // active window title
     [TabSel]           = { blue,    gray2,  black },
     [TabNorm]          = { gray3,   black,  black },
-    [SchemeTag]        = { gray3,   black,  black },
+    [SchemeTag]        = { gray3,   black,  gray3 },
     [SchemeTag1]       = { blue,    black,  black },
     [SchemeTag2]       = { red,     black,  black },
     [SchemeTag3]       = { orange,  black,  black },
@@ -151,7 +151,7 @@ static const Key keys[] = {
         SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
     { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
-    { MODKEY,                           XK_Return,  spawn,            SHCMD("st", NULL)},
+    { MODKEY,                           XK_Return,  spawn,            SHCMD("st")},
 
     // toggle stuff
     { MODKEY,                           XK_b,       togglebar,      {0} },
