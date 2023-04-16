@@ -6,7 +6,7 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int default_border = 0;   /* to switch back to default border after dynamic border resizing via keybinds */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int cornerrad      = 2;   /* border radius of the edges */
+static const unsigned int cornerrad      = 5;   /* border radius of the edges */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
@@ -38,7 +38,8 @@ static const int new_window_attach_on_end = 0; /*  1 means the new window will a
 #define ICONSIZE 22   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
+// static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=17" };
+static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"Fira Code iScript:style:medium:size=15" };
 
 // theme
 // #include "themes/onedark.h"

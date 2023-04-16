@@ -8,8 +8,7 @@ picom &
 bubbles &
 eww open eww &
 
-~/.config/chadwm/scripts/bar.sh &
-~/.config/chadwm/scripts/fehbg.sh &
-~/.config/chadwm/scripts/bubbles.sh &
-# bubbles &
+bar &
+fehbg &
+
 while type dwm >/dev/null; do dwm && continue || break; done

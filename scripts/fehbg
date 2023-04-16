@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Directory containing the wallpapers
+DIR="/home/charapyge/Pictures/wall"
+
+# Command to Select wallpapers at random from the $DIR Directory
+WAL=$(ls $DIR/*.{png,jpg} | shuf -n1)
+
+# Set lockscreen wallpaper
+# cat $WAL > $DIR/current-wallpaper.png
+PIC=$(echo $WAL)
+
+feh --bg-scale $PIC
