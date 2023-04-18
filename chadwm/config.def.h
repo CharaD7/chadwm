@@ -6,7 +6,6 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int default_border = 0;   /* to switch back to default border after dynamic border resizing via keybinds */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int cornerrad      = 5;   /* border radius of the edges *
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
@@ -252,13 +251,13 @@ static const Key keys[] = {
     TAGKEYS(                            XK_9,                       8)
 
     // span background change
-    { MODKEY|ControlMask,               XK_p,       spawn,          SHCMD("wal")}
+    { MODKEY|ControlMask,               XK_p,       spawn,          SHCMD("wal")},
 
-    // spawn extended display
-    /* extend to the left of current primary display */
-    { MODKEY|ControlMask,               XK_Left,    spawn,          SHCMD("xrandr --output HDMI-0 --auto --left-of eDP-1-1")}
-    /* extend to the right of current primary display */
-    { MODKEY|ControlMask,               XK_Right,    spawn,          SHCMD("xrandr --output HDMI-0 --auto --right-of eDP-1-1")}
+    // span extended monitor display
+    /* span left monitor display */
+    { MODKEY|ControlMask,               XK_Left,       spawn,          SHCMD("xrandr --output HDMI-0 --auto --left-of eDP-1-1")},
+    /* span right monitor display */
+    { MODKEY|ControlMask,               XK_Right,       spawn,          SHCMD("xrandr --output HDMI-0 --auto --right-of eDP-1-1")},
 };
 
 /* button definitions */
