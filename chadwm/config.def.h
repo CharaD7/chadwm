@@ -253,6 +253,12 @@ static const Key keys[] = {
 
     // span background change
     { MODKEY|ControlMask,               XK_p,       spawn,          SHCMD("wal")}
+
+    // spawn extended display
+    /* extend to the left of current primary display */
+    { MODKEY|ControlMask,               XK_Left,    spawn,          SHCMD("xrandr --output HDMI-0 --auto --left-of eDP-1-1")}
+    /* extend to the right of current primary display */
+    { MODKEY|ControlMask,               XK_Right,    spawn,          SHCMD("xrandr --output HDMI-0 --auto --right-of eDP-1-1")}
 };
 
 /* button definitions */
