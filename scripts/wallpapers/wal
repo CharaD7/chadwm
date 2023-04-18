@@ -3,7 +3,7 @@
 # Script to automatically change the wallpaper and lockscreen in spectrwm
 
 # Directory containing the wallpapers
-DIR="/home/charapyge/Pictures/wall"
+DIR="~/Pictures/wall"
 
 # Command to Select wallpapers at random from the $DIR Directory
 WAL=$(ls $DIR/*.{png,jpg} | shuf -n1)
