@@ -10,6 +10,7 @@ picom &
 
 fetch &
 bubbles &
+eww open eww &
 
 ~/.config/chadwm/scripts/bar &
 
