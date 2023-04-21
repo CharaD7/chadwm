@@ -12,5 +12,6 @@ fetch &
 bubbles &
 
 ~/.config/chadwm/scripts/bar &
+~/.config/chadwm/bubbly/start.sh &
 
 while type dwm >/dev/null; do dwm && continue || break; done
