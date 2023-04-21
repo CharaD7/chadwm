@@ -286,9 +286,9 @@ static const Key keys[] = {
 
     // span bubbly display
     /* span the chat display */
-    {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbles chat")},
+    {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbly chat")},
     /* span the keystrokes display */
-    {MODKEY | ControlMask, XK_k, spawn, SHCMD("bubbles keystrokes")},
+    {MODKEY | ControlMask, XK_k, spawn, SHCMD("bubbly keystrokes")},
 
 };
 
