@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx = 2; /* border pixel of windows */
+static const unsigned int borderpx = 1; /* border pixel of windows */
 static const unsigned int default_border =
     0; /* to switch back to default border after dynamic border resizing via
           keybinds */
@@ -64,7 +64,7 @@ static const char *fonts[] = {"Iosevka:style:medium:size=12",
 
 static const char *colors[][3] = {
     /*                     fg       bg      border */
-    [SchemeNorm] = {gray3, black, orange},
+    [SchemeNorm] = {gray3, black, gray3},
     [SchemeSel] = {gray4, blue, blue},
     [SchemeTitle] = {white, black, pink}, // active window title
     [TabSel] = {blue, gray2, black},
@@ -287,7 +287,7 @@ static const Key keys[] = {
     // toggle keystroke mode
     {MODKEY | ControlMask, XK_b, spawn, SHCMD("bubbly keystrokes")},
     // toggle chat mode
-    {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbly keystrokes")},
+    {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbly chat")},
 };
 
 /* button definitions */
