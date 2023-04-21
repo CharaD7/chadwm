@@ -9,9 +9,8 @@ xset r rate 200 50 &
 picom &
 
 fetch &
-bubbles &
+bubbly keystrokes &
 
 ~/.config/chadwm/scripts/bar &
-# ~/.config/chadwm/bubbly/start.sh &
 
 while type dwm >/dev/null; do dwm && continue || break; done
