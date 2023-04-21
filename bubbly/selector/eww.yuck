@@ -1,10 +1,10 @@
 (defvar mode "")
 
 (defwidget header []
-  (box :class "header" 
-    (label :text "󰘳" :class "icon" )
+  (box :class "header"
+    (label :text "" :class "icon" )
     (label :text "Bubbly")
-   (button :class "closeIcon" :onclick "eww -c $HOME/.local/share/bubbly/selector close selector "  "󰅙" )
+   (button :class "closeIcon" :onclick "eww -c $HOME/.local/share/bubbly/selector close selector "  "" )
   )
 )
 

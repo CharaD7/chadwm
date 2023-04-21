@@ -180,6 +180,7 @@ static const Key keys[] = {
      SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
     {MODKEY, XK_c, spawn, SHCMD("rofi -show drun")},
+    {MODKEY, XK_r, spawn, SHCMD("rofi -show run")},
     {MODKEY, XK_Return, spawn, SHCMD("st")},
 
     // toggle stuff
@@ -283,11 +284,12 @@ static const Key keys[] = {
     {MODKEY | ControlMask, XK_Right, spawn,
      SHCMD("xrandr --output HDMI-0 --auto --right-of eDP-1-1")},
 
-    // bubbly shortcut bindings
-    // toggle keystroke mode
-    {MODKEY | ControlMask, XK_b, spawn, SHCMD("bubbly keystrokes")},
-    // toggle chat mode
-    {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbly chat")},
+    // span bubbly display
+    /* span the chat display */
+    {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbles chat")},
+    /* span the keystrokes display */
+    {MODKEY | ControlMask, XK_k, spawn, SHCMD("bubbles keystrokes")},
+
 };
 
 /* button definitions */
