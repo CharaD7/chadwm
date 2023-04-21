@@ -2,6 +2,7 @@
     bg-col:  #282a36;
     bg-col-light: #44475a;
     border-col: #44475a;
+    cust-border-col: #61afef;
     selected-col: #44475a;
     blue: #bd93f9;
     fg-col: #f8f8f2;
