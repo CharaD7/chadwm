@@ -289,6 +289,10 @@ static const Key keys[] = {
     {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbly chat")},
     /* span the keystrokes display */
     {MODKEY | ControlMask, XK_k, spawn, SHCMD("bubbly keystrokes")},
+    // Close bubbly chat instance
+    {MODKEY | ControlMask | ShiftMask, XK_c, spawn, SHCMD("eww -c ~/.local/share/bubbly/bubbles close bubbly")},
+    // Close bubbly keystrokes instance
+    {MODKEY | ControlMask | ShiftMask, XK_k, spawn, SHCMD("eww -c ~/.local/share/bubbly/keystrokes close keystrokes")},
 
 };
 
