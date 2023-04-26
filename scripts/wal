@@ -1,20 +1,13 @@
-#!/bin/bash
-# requires feh
-# Script to automatically change the wallpaper and lockscreen in spectrwm
+#!/bin/sh
 
-# Directory containing the wallpapers
-DIR="~/Pictures/wall"
+# Stop on errors
+set -e
+
+# Get the ~/Pictures dir even if it's localized
+wpdir=$(xdg-user-dir PICTURES)
 
 while true; do
-  # Command to Select wallpapers at random from the $DIR Directory
-  WAL=$(ls $DIR/*.{png,jpg} | shuf -n1)
-
-  # Set lockscreen wallpaper
-  # cat $WAL > $DIR/current-wallpaper.png
-  PIC=$(echo $WAL)
-
-  # Set Desktop wallpaper
-  feh --bg-fill $PIC
-  # feh --bg-scale $PIC
-  sleep 1200 # wait for 20 minutes
+  wp=$(find "$wpdir/wall" -maxdepth 1 -iname '*.png' -or -iname '*.jpg' | shuf -n1)
+  feh --bg-fill "$wp"
+  sleep 20m
 done
