@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # requires feh
 # Script to automatically change the wallpaper and lockscreen in spectrwm
 
