@@ -53,7 +53,7 @@ static const int new_window_attach_on_end =
 #define ICONSIZE 22   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[] = {"Fira Code iScript:style:medium:size=12",
+static const char *fonts[] = {"Iosevka:style:medium:size=12",
                               "Fira Code iScript:style:medium:size=15"};
 // static const char *fonts[]          = {"Iosevka:style:medium:size=12"
 // ,"JetBrainsMono Nerd Font Mono:style:medium:size=15" };
@@ -290,9 +290,11 @@ static const Key keys[] = {
     /* span the keystrokes display */
     {MODKEY | ControlMask, XK_k, spawn, SHCMD("bubbly keystrokes")},
     // Close bubbly chat instance
-    {MODKEY | ControlMask | ShiftMask, XK_c, spawn, SHCMD("eww -c ~/.local/share/bubbly/bubbles close bubbly")},
+    {MODKEY | ControlMask | ShiftMask, XK_c, spawn,
+     SHCMD("eww -c ~/.local/share/bubbly/bubbles close bubbly")},
     // Close bubbly keystrokes instance
-    {MODKEY | ControlMask | ShiftMask, XK_k, spawn, SHCMD("eww -c ~/.local/share/bubbly/keystrokes close keystrokes")},
+    {MODKEY | ControlMask | ShiftMask, XK_k, spawn,
+     SHCMD("eww -c ~/.local/share/bubbly/keystrokes close keystrokes")},
 
 };
 
