@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font =
-    "Fira Code iScript :pixelsize=15:antialias=true:autohint=true";
-// static char *font = "JetBrainsMono Nerd Font
-// :pixelsize=15:antialias=true:autohint=true";
+// static char *font =
+//     "Fira Code iScript :pixelsize=15:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font
+:pixelsize=15:antialias=true:autohint=true";
 static char *font2[] = {
     "Fira Code iScript :pixelsize=15:antialias=true:autohint=true"};
 // static char *font2[] = { "JetBrainsMono Nerd Font
@@ -158,7 +158,7 @@ unsigned int defaultrcs = 257;
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorshape = 1;
+static unsigned int cursorshape = 7;
 
 /*
  * Default columns and rows numbers

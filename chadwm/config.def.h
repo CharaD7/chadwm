@@ -53,10 +53,11 @@ static const int new_window_attach_on_end =
 #define ICONSIZE 22   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[] = {"Iosevka:style:medium:size=12",
-                              "Fira Code iScript:style:medium:size=15"};
-// static const char *fonts[]          = {"Iosevka:style:medium:size=12"
-// ,"JetBrainsMono Nerd Font Mono:style:medium:size=15" };
+// static const char *fonts[] = {"Iosevka:style:medium:size=12",
+//                               "Fira Code iScript:style:medium:size=15"};
+static const char *fonts[] = {
+    "Iosevka:style:medium:size=12",
+    "JetBrainsMono Nerd Font Mono:style:medium:size=15"};
 
 // theme
 // #include "themes/onedark.h"
@@ -175,13 +176,13 @@ static const Key keys[] = {
 
     // screenshot fullscreen and cropped
     {MODKEY | ControlMask, XK_u, spawn,
-     SHCMD("maim | xclip -selection clipboard -t image/png")},
+     SHCMD("maim | xclip -selection clipboard -t image.png")},
     {MODKEY, XK_u, spawn,
-     SHCMD("maim --select | xclip -selection clipboard -t image/png")},
+     SHCMD("maim --select | xclip -selection clipboard -t image.png")},
 
     {MODKEY, XK_c, spawn, SHCMD("rofi -show drun")},
     {MODKEY, XK_r, spawn, SHCMD("rofi -show run")},
-    {MODKEY, XK_Return, spawn, SHCMD("st")},
+    {MODKEY, XK_Return, spawn, SHCMD("st tmux")},
 
     // toggle stuff
     {MODKEY, XK_b, togglebar, {0}},
@@ -278,10 +279,10 @@ static const Key keys[] = {
 
     // span extended monitor display
     /* span left monitor display */
-    {MODKEY | ControlMask, XK_Left, spawn,
+    {MODKEY | ShiftMask, XK_Left, spawn,
      SHCMD("xrandr --output HDMI-0 --auto --left-of eDP-1-1")},
     /* span right monitor display */
-    {MODKEY | ControlMask, XK_Right, spawn,
+    {MODKEY | ShiftMask, XK_Right, spawn,
      SHCMD("xrandr --output HDMI-0 --auto --right-of eDP-1-1")},
 
     // span bubbly display
