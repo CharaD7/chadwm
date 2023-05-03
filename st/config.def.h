@@ -5,8 +5,6 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-// static char *font =
-//     "Fira Code iScript :pixelsize=15:antialias=true:autohint=true";
 static char *font = "JetBrainsMono Nerd Font
 :pixelsize=15:antialias=true:autohint=true";
 static char *font2[] = {
@@ -67,7 +65,7 @@ static uint su_timeout = 200;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 500;
 
 /*
  * interval (in milliseconds) between each successive call to ximspot. This
@@ -87,11 +85,11 @@ static unsigned int cursorthickness = 2;
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
  * 0: disable (render all U25XX glyphs normally from the font).
  */
-const int boxdraw = 1;
-const int boxdraw_bold = 1;
+const int boxdraw = 0;
+const int boxdraw_bold = 0;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 1;
+const int boxdraw_braille = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
