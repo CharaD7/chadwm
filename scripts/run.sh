@@ -3,7 +3,7 @@
 xrdb merge ~/.Xresources
 xrandr --output HDMI-0 --auto --left-of eDP-1-1
 xbacklight -set 10 &
-compton &
+# compton &
 xset r rate 200 50 &
 picom &
 
