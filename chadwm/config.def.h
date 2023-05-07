@@ -56,8 +56,8 @@ static const int new_window_attach_on_end =
 // static const char *fonts[] = {"Iosevka:style:medium:size=12",
 //                               "Fira Code iScript:style:medium:size=15"};
 static const char *fonts[] = {
-    "Iosevka:style:medium:size=12",
-    "JetBrainsMono Nerd Font Mono:style:medium:size=12"};
+    "Iosevka:style:medium:size=11",
+    "JetBrainsMono Nerd Font Mono:style:medium:size=11"};
 
 // theme
 // #include "themes/onedark.h"
