@@ -64,22 +64,27 @@ static const char *fonts[] = {
 #include "themes/catppuccin.h"
 
 static const char *colors[][3] = {
-    /*                     fg       bg      border */
-    [SchemeNorm] = {gray3, black, gray3},
-    [SchemeSel] = {gray4, blue, blue},
-    [SchemeTitle] = {white, black, pink}, // active window title
-    [TabSel] = {blue, gray2, black},
-    [TabNorm] = {gray3, black, orange},
-    [SchemeTag] = {gray3, black, gray3},
-    [SchemeTag1] = {blue, black, black},
-    [SchemeTag2] = {red, black, black},
-    [SchemeTag3] = {orange, black, black},
-    [SchemeTag4] = {green, black, black},
-    [SchemeTag5] = {pink, black, black},
-    [SchemeLayout] = {green, black, black},
-    [SchemeBtnPrev] = {green, black, black},
-    [SchemeBtnNext] = {yellow, black, black},
-    [SchemeBtnClose] = {red, black, black},
+    /*                     fg            bg      border */
+    [SchemeNorm]        = {gray3,      black,   gray3},
+    [SchemeSel]         = {gray4,      blue,    blue},
+    [SchemeTitle]       = {white,      black,   black}, // active window title
+    [TabSel]            = {blue,       gray2,   black},
+    [TabNorm]           = {gray3,      black,   black},
+    [SchemeTag]         = {gray3,      black,   gray3},
+    [SchemeTag1]        = {blue,       black,   blue},
+    [SchemeTag2]        = {red,        black,   red},
+    [SchemeTag3]        = {orange,     black,   orange},
+    [SchemeTag4]        = {green,      black,   green},
+    [SchemeTag5]        = {pink,       black,   pink},
+    [SchemeTag6]        = {turquoise,  black,   turquoise},
+    [SchemeTag7]        = {goldenrod,  black,   goldenrod},
+    [SchemeTag8]        = {tan,        black,   tan},
+    [SchemeTag9]        = {almond,     black,   almond},
+    [SchemeTag10]       = {brick,      black,   brick},
+    [SchemeLayout]      = {green,      black,   black},
+    [SchemeBtnPrev]     = {green,      black,   black},
+    [SchemeBtnNext]     = {yellow,     black,   black},
+    [SchemeBtnClose]    = {red,        black,   black},
 };
 
 /* tagging */
@@ -94,7 +99,8 @@ static const Launcher launchers[] = {
 };
 
 static const int tagschemes[] = {SchemeTag1, SchemeTag2, SchemeTag3, SchemeTag4,
-                                 SchemeTag5};
+                                 SchemeTag5, SchemeTag6, SchemeTag7, SchemeTag8,
+                                 SchemeTag9, SchemeTag10};
 
 static const unsigned int ulinepad =
     5; /* horizontal padding between the underline and tag */
