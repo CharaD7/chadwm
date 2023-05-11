@@ -281,10 +281,10 @@ static const Key keys[] = {
 
     // span extended monitor display
     /* span left monitor display */
-    {MODKEY | ShiftMask, XK_Left, spawn,
+    {MODKEY | Mod1Mask, XK_Left, spawn,
      SHCMD("xrandr --output HDMI-0 --auto --left-of eDP-1-1")},
     /* span right monitor display */
-    {MODKEY | ShiftMask, XK_Right, spawn,
+    {MODKEY | Mod1Mask, XK_Right, spawn,
      SHCMD("xrandr --output HDMI-0 --auto --right-of eDP-1-1")},
 
     // span bubbly display
