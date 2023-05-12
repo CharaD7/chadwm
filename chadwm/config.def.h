@@ -54,9 +54,9 @@ static const int new_window_attach_on_end =
 #define ICONSPACING 8 /* space between icon and title */
 
 // static const char *fonts[] = {"Iosevka:style:medium:size=12",
-//                               "Fira Code iScript:style:medium:size=15"};
+//                               "Fira Code iScript:style:medium:size=15", "Material Design Icons Desktop:size=11"};
 static const char *fonts[] = {
-    "Iosevka:style:medium:size=12",
+    "Iosevka:style:medium:size=14",
     "JetBrainsMono Nerd Font Mono:style:medium:size=11"};
 
 // theme
