@@ -54,7 +54,8 @@ static const int new_window_attach_on_end =
 #define ICONSPACING 8 /* space between icon and title */
 
 // static const char *fonts[] = {"Iosevka:style:medium:size=12",
-//                               "Fira Code iScript:style:medium:size=15", "Material Design Icons Desktop:size=11"};
+//                               "Fira Code iScript:style:medium:size=15",
+//                               "Material Design Icons Desktop:size=11"};
 static const char *fonts[] = {
     "Iosevka:style:medium:size=14",
     "JetBrainsMono Nerd Font Mono:style:medium:size=11"};
@@ -65,31 +66,31 @@ static const char *fonts[] = {
 
 static const char *colors[][3] = {
     /*                     fg            bg      border */
-    [SchemeNorm]        = {gray3,      black,   gray3},
-    [SchemeSel]         = {gray4,      blue,    blue},
-    [SchemeTitle]       = {white,      black,   black}, // active window title
-    [TabSel]            = {blue,       gray2,   black},
-    [TabNorm]           = {gray3,      black,   black},
-    [SchemeTag]         = {gray3,      black,   gray3},
-    [SchemeTag1]        = {blue,       black,   blue},
-    [SchemeTag2]        = {red,        black,   red},
-    [SchemeTag3]        = {orange,     black,   orange},
-    [SchemeTag4]        = {green,      black,   green},
-    [SchemeTag5]        = {pink,       black,   pink},
-    [SchemeTag6]        = {turquoise,  black,   turquoise},
-    [SchemeTag7]        = {goldenrod,  black,   goldenrod},
-    [SchemeTag8]        = {tan,        black,   tan},
-    [SchemeTag9]        = {almond,     black,   almond},
-    [SchemeTag10]       = {brick,      black,   brick},
-    [SchemeLayout]      = {green,      black,   black},
-    [SchemeBtnPrev]     = {green,      black,   black},
-    [SchemeBtnNext]     = {yellow,     black,   black},
-    [SchemeBtnClose]    = {red,        black,   black},
+    [SchemeNorm] = {gray3, black, gray3},
+    [SchemeSel] = {gray4, blue, blue},
+    [SchemeTitle] = {white, black, black}, // active window title
+    [TabSel] = {blue, gray2, black},
+    [TabNorm] = {gray3, black, black},
+    [SchemeTag] = {gray3, black, gray3},
+    [SchemeTag1] = {blue, black, blue},
+    [SchemeTag2] = {red, black, red},
+    [SchemeTag3] = {orange, black, orange},
+    [SchemeTag4] = {green, black, green},
+    [SchemeTag5] = {pink, black, pink},
+    [SchemeTag6] = {turquoise, black, turquoise},
+    [SchemeTag7] = {goldenrod, black, goldenrod},
+    [SchemeTag8] = {tan, black, tan},
+    [SchemeTag9] = {almond, black, almond},
+    [SchemeTag10] = {brick, black, brick},
+    [SchemeLayout] = {green, black, black},
+    [SchemeBtnPrev] = {green, black, black},
+    [SchemeBtnNext] = {yellow, black, black},
+    [SchemeBtnClose] = {red, black, black},
 };
 
 /* tagging */
-static char *tags[] = {"", "", "", "", "",
-                       "", "", "", "", ""};
+static char *tags[] = {"󰞷", "󰈹", "󰹼", "󱞊", "󱛉",
+                       "󱃖", "󰐤", "󰀼", "󰅢", "󰭹"};
 
 static const char *eww[] = {"eww", "open", "eww", NULL};
 
@@ -283,7 +284,7 @@ static const Key keys[] = {
     // span background change
     {MODKEY | ControlMask, XK_p, spawn, SHCMD("wal")},
     // suspend the machine
-    {MODKEY | ConntrolMask,  XK_l, spawn, SHCMD("systemctl suspend")},
+    {MODKEY | ControlMask, XK_l, spawn, SHCMD("systemctl suspend")},
 
     // span extended monitor display
     /* span left monitor display */
