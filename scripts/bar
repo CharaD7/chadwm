@@ -35,8 +35,7 @@ pkgs() {
 
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
-  printf "^c$blue^ ^b$white^ 󰂅 "
-  printf "^c$blue^ $get_capacity"" %"
+  printf "^c$blue^ 󰂅  $get_capacity"" %"
   # get_state="$(upower -i $(upower -e | grep BAT) | grep --color=never -E 'state|to\ full|to\ empty|state')"
   # if [$get_capacity -gt 70 && $get_state -eq 'charging']; then
   #   printf "^c$blue^ ^b$grey^ 󰂅 "
