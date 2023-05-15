@@ -35,23 +35,25 @@ pkgs() {
 
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
-  get_state="$(upower -i $(upower -e | grep BAT) | grep --color=never -E 'state|to\ full|to\ empty|state')"
-  if [$get_capacity -gt 70 && $get_state -eq 'charging']; then
-    printf "^c$blue^ ^b$grey^ 󰂅 "
-    printf "^c$blue^ $get_capacity"" % "
-  elif [($get_capacity -gt 49 && $get_capacity -lt 71) && $get_state -eq 'charging']; then
-    printf "^c$green^ ^b$grey^ 󱊥"
-    printf "^c$blue^ $get_capacity"" % "
-  elif [($get_capacity -gt 49 && $get_capacity -lt 71) && $get_state -eq 'not-charging']; then
-    printf "^c$red^ ^b$grey^ 󱟦"
-    printf "^c$blue^ $get_capacity"" % "
-  elif [$get_capacity -lt 50 && $get_state -eq 'not-charging']; then
-    printf "^c$red^ ^b$grey^ 󰂃"
-    printf "^c$red^ $get_capacity"" % "
-  else
-    printf "^c$red^ ^b$white^ 󰂑"
-    printf "^c$white^ ^b$red^ $get_capacity"" %"
-  fi
+  printf "^c$blue^ ^b$white^ 󰂅 "
+  printf "^c$blue^ $get_capacity"" %"
+  # get_state="$(upower -i $(upower -e | grep BAT) | grep --color=never -E 'state|to\ full|to\ empty|state')"
+  # if [$get_capacity -gt 70 && $get_state -eq 'charging']; then
+  #   printf "^c$blue^ ^b$grey^ 󰂅 "
+  #   printf "^c$blue^ $get_capacity"" % "
+  # elif [($get_capacity -gt 49 && $get_capacity -lt 71) && $get_state -eq 'charging']; then
+  #   printf "^c$green^ ^b$grey^ 󱊥"
+  #   printf "^c$blue^ $get_capacity"" % "
+  # elif [($get_capacity -gt 49 && $get_capacity -lt 71) && $get_state -eq 'not-charging']; then
+  #   printf "^c$red^ ^b$grey^ 󱟦"
+  #   printf "^c$blue^ $get_capacity"" % "
+  # elif [$get_capacity -lt 50 && $get_state -eq 'not-charging']; then
+  #   printf "^c$red^ ^b$grey^ 󰂃"
+  #   printf "^c$red^ $get_capacity"" % "
+  # else
+  #   printf "^c$red^ ^b$white^ 󰂑"
+  #   printf "^c$white^ ^b$red^ $get_capacity"" %"
+  # fi
 }
 
 brightness() {
