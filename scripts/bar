@@ -22,15 +22,10 @@ pkg_updates() {
   updates=$({ timeout 20 aptitude search '~U' 2>/dev/null || true; } | wc -l)  # apt (ubuntu, debian etc)
 
   if [ -z "$updates" ]; then
-    printf "  ^c$green^  󰦗  Fully Updated"
+    printf "  ^c$green^  󰦘  Fully Updated"
   else
-    printf "  ^c$green^  󰦘 $updates"" updates"
+    printf "  ^c$black^ ^b$yellow^   󰦗  ^d^%s" "^c$yellow^ $updates pkgs"
   fi
-}
-
-pkgs() {
-  pkgs="$(apt  list --installed | wc -l)"
-  printf "^c$yellow^ 󰏖  $pkgs"
 }
 
 battery() {
@@ -45,7 +40,7 @@ battery() {
 }
 
 brightness() {
-  printf "^c$red^ 󰃞  "
+  printf "^c$black^ ^b$red^ 󰃞  "
   printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
