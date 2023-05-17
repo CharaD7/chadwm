@@ -285,6 +285,10 @@ static const Key keys[] = {
     {MODKEY | ControlMask, XK_p, spawn, SHCMD("wal")},
     // suspend the machine
     {MODKEY | ControlMask, XK_l, spawn, SHCMD("systemctl suspend")},
+    // restart the machine
+    {MODKEY | ControlMask, XK_r, spawn, SHCMD("reboot")},
+    // shutdown the machine
+    {MODKEY | ControlMask, XK_s, spawn, SHCMD("shutdown -s 0")},
 
     // span extended monitor display
     /* span left monitor display */
