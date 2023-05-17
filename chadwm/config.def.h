@@ -288,7 +288,7 @@ static const Key keys[] = {
     // restart the machine
     {MODKEY | ControlMask, XK_r, spawn, SHCMD("reboot")},
     // shutdown the machine
-    {MODKEY | ControlMask, XK_s, spawn, SHCMD("shutdown -s 0")},
+    {MODKEY | ControlMask, XK_s, spawn, SHCMD("shutdown now")},
 
     // span extended monitor display
     /* span left monitor display */
