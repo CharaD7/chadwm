@@ -12,7 +12,7 @@ configuration{
     display-drun: "   Apps ";
 }
 
-@theme "/home/charapyge/.config/chadwm/rofi/themes/dracula.rasi"
+@theme "~/.config/rofi/themes/onedark.rasi"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -22,8 +22,8 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     border: 3px;
-    border-radius: 10px;
-    border-color: @cust-border-col;
+    border-radius: 5px;
+    border-color: @border-col-blue;
     background-color: @bg-col;
 }
 
@@ -54,8 +54,8 @@ textbox-prompt-colon {
 entry {
     padding: 6px;
     margin: 20px 0px 0px 10px;
-    text-color: @cust-border-col;
-    background-color: @light-bg;
+    text-color: @fg-col2;
+    background-color: @bg-col;
 }
 
 listview {
