@@ -5,7 +5,7 @@ userName=$(echo $USER)
 xrdb merge ~/.Xresources
 xrandr --output HDMI-0 --auto --left-of eDP-1-1
 
-xpad -h
+xpad
 
 chown $userName:$userName /sys/class/backlight/intel_backlight/brightness
 # compton &
