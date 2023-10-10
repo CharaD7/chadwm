@@ -31,10 +31,10 @@ static const int floatbar = 1; /* 1 means the bar will float(don't have
                                   padding),0 means the bar have padding */
 static const int topbar = 1;   /* 0 means bottom bar */
 static const int horizpadbar = 5;
-static const int vertpadbar = 5;
-static const int vertpadtab = 5;
-static const int horizpadtabi = 5;
-static const int horizpadtabo = 5;
+static const int vertpadbar = 11;
+static const int vertpadtab = 35;
+static const int horizpadtabi = 15;
+static const int horizpadtabo = 15;
 static const int scalepreview = 4;
 static const int tag_preview = 0; /* 1 means enable, 0 is off */
 static const int colorfultag =
