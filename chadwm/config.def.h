@@ -8,12 +8,12 @@ static const unsigned int default_border =
     0; /* to switch back to default border after dynamic border resizing via
           keybinds */
 static const unsigned int snap = 32;   /* snap pixel */
-static const unsigned int gappih = 10; /* horiz inner gap between windows */
-static const unsigned int gappiv = 10; /* vert inner gap between windows */
+static const unsigned int gappih = 5; /* horiz inner gap between windows */
+static const unsigned int gappiv = 5; /* vert inner gap between windows */
 static const unsigned int gappoh =
-    10; /* horiz outer gap between windows and screen edge */
+    5; /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov =
-    10; /* vert outer gap between windows and screen edge */
+    5; /* vert outer gap between windows and screen edge */
 static const int smartgaps =
     0; /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning =
@@ -31,10 +31,10 @@ static const int floatbar = 1; /* 1 means the bar will float(don't have
                                   padding),0 means the bar have padding */
 static const int topbar = 1;   /* 0 means bottom bar */
 static const int horizpadbar = 5;
-static const int vertpadbar = 11;
-static const int vertpadtab = 35;
-static const int horizpadtabi = 15;
-static const int horizpadtabo = 15;
+static const int vertpadbar = 5;
+static const int vertpadtab = 5;
+static const int horizpadtabi = 5;
+static const int horizpadtabo = 5;
 static const int scalepreview = 4;
 static const int tag_preview = 0; /* 1 means enable, 0 is off */
 static const int colorfultag =
