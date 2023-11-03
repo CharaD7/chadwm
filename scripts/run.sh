@@ -16,4 +16,4 @@ wal &
 
 ~/.config/chadwm/scripts/bar &
 
-while type chadwm >/dev/null; do chadwm && continue || break; done
+while type dwm >/dev/null; do dwm && continue || break; done
