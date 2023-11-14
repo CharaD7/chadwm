@@ -84,8 +84,7 @@ nettrafic() {
   rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
   tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-  printf "^c$green^🔻%4sB^ ^c$red^🔺%4sB\\n" $(numfmt --to=iec $rx $tx)
-  # printf "🔻%4sB 🔺%4sB\\n" $(numfmt --to=iec $rx $tx)
+  printf "🔻%4sB 🔺%4sB\\n" $(numfmt --to=iec $rx $tx)
 }
 
 clock() {
