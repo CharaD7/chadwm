@@ -112,7 +112,7 @@ clock() {
     6) "$TERMINAL" -e "$EDITOR" "$0" ;;
   esac
 	printf "^c$black^ ^b$darkblue^ $icon%I:%M%p"
-	printf "^c$black^^b$blue^ $(date "+%Y %b %d (%a)") "
+  printf "^c$black^^b$blue^ $(date +"(%a) %d-%m-%y %T") "
   
 }
 
