@@ -46,13 +46,13 @@ brightness() {
 }
 
 mem() {
-  printf "^c$blue^^b$black^ 󰍛 "
-  printf "^c$blue^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf "^c$white^ ^b$darkblue^ 󰍛 "
+  printf "^c$blue^ ^c$grey^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$blue^ ^b$white^ 󰀂 ^d^%s" ;;
+	up) printf "^c$white^ ^b$darkblue^ 󰀂 ^d^%s" ;;
 	down) printf "^c$white^ ^b$red^ 󰯡 ^d^%s" ;;
 	esac
 }
@@ -84,7 +84,7 @@ nettrafic() {
   rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
   tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-  printf "🔻%4sB 🔺%4sB\\n" $(numfmt --to=iec $rx $tx)
+  printf "^c$blue^ 🔻%4sB 🔺%4sB\\n" $(numfmt --to=iec $rx $tx)
 }
 
 clock() {
