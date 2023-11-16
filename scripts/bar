@@ -36,12 +36,12 @@ battery() {
     "Not charging") printf "^c$black^ ^b$yellow^ 󰂃 ^d^%s" "^c$yellow^ $get_capacity% Not charging";;
     Charging) printf "^c$black^ ^b$green^ 󱊥 ^d^%s" "^c$green^ $get_capacity% Charging";;
     Unknown) printf "^c$white^ ^b$red^ 󰂑 ^d^%s" "^c$red^ $get_capacity% Unknown";;
-    Full) printf "^c$black^ ^b$blue^ 󱟢 ^d^%s" "^c$white^ $get_capacity% Charged";;
+    Full) printf "^c$black^ ^b$blue^ 󱟢 ^d^%s" "^c$white^ $get_capacity% Fully charged";;
   esac
 }
 
 brightness() {
-  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^ ^b^$grey^ $(cat /sys/class/backlight/*/brightness) "
+  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^ $(cat /sys/class/backlight/*/brightness) "
   # printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
@@ -84,12 +84,14 @@ nettrafic() {
   rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
   tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-  printf "🔻%4sB 🔺%4sB\\n" $(numfmt --to=iec $rx $tx)
+  printf "^c$green^🔻'%4sB' ^c$red^🔺'%4sB'\\n" $(numfmt --to=iec $rx $tx)
 }
+
 
 clock() {
 	printf "^c$black^ ^b$darkblue^ 󰥔 "
-	printf "^c$black^^b$blue^ $(date +'(%a) %d-%m-%y %T') "
+	# printf "^c$black^^b$blue^ $(date)  "
+	printf "^c$black^^b$blue^ $(date '+(%a) %d-%m-%y %T')  "
 }
 
 while true; do
