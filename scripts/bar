@@ -36,7 +36,7 @@ battery() {
     "Not charging") printf "^c$black^ ^b$yellow^ 󰂃 ^d^%s" "^c$yellow^ $get_capacity% Not charging";;
     Charging) printf "^c$black^ ^b$green^ 󱊥 ^d^%s" "^c$green^ $get_capacity% Charging";;
     Unknown) printf "^c$white^ ^b$red^ 󰂑 ^d^%s" "^c$red^ $get_capacity% Unknown";;
-    Full) printf "^c$black^ ^b$blue^ 󱟢 ^d^%s" "^c$white^ $get_capacity% Fully charged";;
+    Full) printf "^c$black^ ^b$blue^ 󱟢 ^d^%s" "^c$white^ $get_capacity% charged";;
   esac
 }
 
@@ -89,7 +89,8 @@ nettrafic() {
 
 clock() {
 	printf "^c$black^ ^b$darkblue^ 󰥔 "
-	printf "^c$black^^b$blue^ $(date)  "
+	# printf "^c$black^^b$blue^ $(date)  "
+  printf "^c$black^ ^b$blue^ $(date '+(%a) %d-%m-%y %T')  "
 	# printf "^c$black^^b$blue^ $(date '+%H:%M')  "
 }
 
