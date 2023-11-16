@@ -41,7 +41,7 @@ battery() {
 }
 
 brightness() {
-  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^ $(cat /sys/class/backlight/*/brightness) "
+  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^ ^b^$grey^ $(cat /sys/class/backlight/*/brightness) "
   # printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
@@ -111,8 +111,7 @@ clock() {
   - Middle click opens calcurse if installed" ;;
     6) "$TERMINAL" -e "$EDITOR" "$0" ;;
   esac
-  printf "^c$black^ ^b$darkblue^ $(icon) "
-	# printf "^c$black^ ^b$darkblue^ $icon%I:%M%p"
+  printf "^c$black^ ^b$darkblue^ $icon%I:%M%p "
   printf "^c$black^ ^b$blue^ $(date +"(%a) %d-%m-%y %T")"
   
 }
