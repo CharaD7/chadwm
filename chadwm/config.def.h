@@ -293,7 +293,8 @@ static const Key keys[] = {
     // Close bubbly keystrokes instance
     {MODKEY | ControlMask | ShiftMask, XK_k, spawn,
      SHCMD("eww -c ~/.local/share/bubbly/keystrokes close keystrokes")},
-
+    // Open flatpak's smile
+    {MODKEY, XK_;, spawn, SHCMD("flatpak run it.mijorus.smile")}
 };
 
 /* button definitions */
