@@ -166,7 +166,8 @@ static const Key keys[] = {
     {0, XF86XK_MonBrightnessDown, spawn, {.v = light_down}},
 
     // keyboard backlight
-    {0, 78, spawn, SHCMD("~/.config/chadwm/scripts/backlight.sh")},
+    // keylight is a an alias for backlight located in the scripts directory
+    {MODKEY | Mod1Mask, XK_b, spawn, SHCMD("keylight")},
 
     // screenshot fullscreen and cropped
     {MODKEY | ControlMask, XK_u, spawn,
