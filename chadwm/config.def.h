@@ -166,7 +166,7 @@ static const Key keys[] = {
     {0, XF86XK_MonBrightnessDown, spawn, {.v = light_down}},
 
     // keyboard backlight
-    {0, XK_Scroll_Lock, spawn, SHCMD("~/.config/chadwm/scripts/backlight.sh")}
+    {0, 133, spawn, SHCMD("~/.config/chadwm/scripts/backlight.sh")}
 
     // screenshot fullscreen and cropped
     {MODKEY | ControlMask, XK_u, spawn,
