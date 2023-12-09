@@ -4,7 +4,7 @@
 status=$( xset q | grep 'Scroll Lock' | awk '{print $12}' )
 
 # Toggle the backlight status 
-if [ "$status" == "00000002" ]; then
+if [ "$status" == "on" ]; then
   # If the backlight is on, turn it off
   xset -led
   # xset -led named 'Scroll Lock'
