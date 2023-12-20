@@ -15,5 +15,6 @@ picom &
 wal &
 
 ~/.config/chadwm/scripts/bar &
+dwm 2> ~/dwm.log
 
 while type dwm >/dev/null; do dwm && continue || break; done
