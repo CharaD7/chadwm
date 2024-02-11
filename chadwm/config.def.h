@@ -34,15 +34,15 @@ static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle"
 static const char *light_up[] = {"/usr/bin/light", "-A", "5", NULL};
 static const char *light_down[] = {"/usr/bin/light", "-U", "5", NULL};
 static const int new_window_attach_on_end = 0; /*  1 means the new window will attach on the end; 0 means the new window will attach on the front,default is front */
-#define ICONSIZE 25   /* icon size */
-#define ICONSPACING 8 /* space between icon and title */
+#define ICONSIZE 20   /* icon size */
+#define ICONSPACING 5 /* space between icon and title */
 
 // static const char *fonts[] = {"Iosevka:style:medium:size=12",
 //                               "Fira Code iScript:style:medium:size=15",
 //                               "Material Design Icons Desktop:size=11"};
 static const char *fonts[] = {
-    "Iosevka:style:medium:size=14",
-    "JetBrainsMono Nerd Font Mono:style:medium:size=11"};
+    "Iosevka:style:medium:size=12",
+    "JetBrainsMono Nerd Font Mono:style:medium:size=10"};
 
 // theme
 // #include "themes/onedark.h"
