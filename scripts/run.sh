@@ -13,6 +13,7 @@ xset r rate 200 50 &
 picom &
 
 wal &
+dunst & # Add notification daemon to startup
 
 ~/.config/chadwm/scripts/bar &
 dwm 2> ~/dwm.log
