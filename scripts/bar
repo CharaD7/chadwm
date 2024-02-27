@@ -41,7 +41,7 @@ battery() {
 }
 
 brightness() {
-  printf "^c$black^ ^b$red^ 󰃞 ^d^%s" "^c$red^ $(cat /sys/class/backlight/*/brightness) "
+  printf "^c$black^ ^b$darkblue^ 󰃞 ^d^%s" "^c$blue^ $(cat /sys/class/backlight/*/brightness) "
   # printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
