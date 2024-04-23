@@ -41,8 +41,10 @@ static const int new_window_attach_on_end = 0; /*  1 means the new window will a
 //                               "Fira Code iScript:style:medium:size=15",
 //                               "Material Design Icons Desktop:size=11"};
 static const char *fonts[] = {
-    "Iosevka:style:medium:size=10",
-    "JetBrainsMono Nerd Font Mono:style:medium:size=8"};
+    "Fira Code iScript:style:medium:size=10",
+    /* "Iosevka:style:medium:size=10", */
+    "Fira Code iScript:style:medium:size=8"};
+    /* "JetBrainsMono Nerd Font Mono:style:medium:size=8"}; */
 
 // theme
 // #include "themes/onedark.h"
