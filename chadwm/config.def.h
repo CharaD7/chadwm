@@ -300,7 +300,8 @@ static const Key keys[] = {
     // {MODKEY | ControlMask, XK_., spawn, SHCMD("flatpak run it.mijorus.smile")},
     // Toggle menu bar
     // {MODKEY | ControlMask, XK_m, togglebar, {0}},
-    {MODKEY | Mod1Mask, XK_m, spawn, | SHCMD("~/.config/chadwm/scripts/toggle_menu.sh")},
+    {MODKEY | Mod1Mask, XK_m, spawn,
+     SHCMD("~/.config/chadwm/scripts/toggle_menu.sh")},
 };
 
 /* button definitions */
