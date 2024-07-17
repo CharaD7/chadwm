@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Stop on errors
+set -e
+
 # Get the current focused window
 window_id=$(xdotool getactivewindow)
 
