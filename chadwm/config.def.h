@@ -298,7 +298,13 @@ static const Key keys[] = {
      SHCMD("eww -c ~/.local/share/bubbly/keystrokes close keystrokes")},
     // Open flatpak's smile
     // {MODKEY | ControlMask, XK_., spawn, SHCMD("flatpak run it.mijorus.smile")},
+    // Toggle menu bar
+    // {MODKEY | ControlMask, XK_m, togglebar, {0}},
+    {MODKEY | ControlMask, XK_m, spawn, {.v = togglemenu}},
 };
+
+// Toggle menu command
+static const char *togglemenu[] = {"/bin/sh", "../scripts/toggle_menu.sh", NULL};
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,
