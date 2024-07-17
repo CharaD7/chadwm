@@ -153,7 +153,7 @@ static const Layout layouts[] = {
   }
 
 // Toggle menu command
-static const char *togglemenu[] = {"/bin/sh", "../scripts/toggle_menu.sh", NULL};
+static const char *togglemenu[] = {"/bin/sh", "~/.config/chadwm/scripts/toggle_menu.sh", NULL};
 
 /* commands */
 
