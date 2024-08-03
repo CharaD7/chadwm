@@ -14,7 +14,7 @@ chown $userName:$userName /sys/class/backlight/intel_backlight/brightness
 xset r rate 200 50 &
 picom &
 
-wal &
+~/.config/chadwm/scripts/wal &
 dunst & # Add notification daemon to startup
 flameshot & # A screen capture utility
 
