@@ -4,3 +4,6 @@ chadwm/*.o
 chadwm/*.orig
 chadwm/*.rej
 .ccls-cache/
+
+# neovide output file
+nohup.out
