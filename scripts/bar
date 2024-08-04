@@ -64,8 +64,8 @@ nettrafic() {
 
   case $BLOCK_BUTTON in
     1) setsid -f "$TERMINAL" -e bmon ;;
-    3) notify-send "🌐 Network traffic module" "🔽: Traffic received
-    🔼: Traffic transmitted" ;;
+    3) notify-send "🌐 Network traffic module" "󱚶: Traffic received
+    󱚺: Traffic transmitted" ;;
     6) "$TERMINAL" -e "$EDITOR" "$0" ;;
   esac
 
