@@ -37,9 +37,9 @@ static const int new_window_attach_on_end = 0; /*  1 means the new window will a
 #define ICONSIZE 18   /* icon size */
 #define ICONSPACING 3 /* space between icon and title */
 
-static const char *fonts[] = {"Iosevka:style:medium:size=12",
-                              "Fira Code iScript:style:medium:size=15",
-                              "Material Design Icons Desktop:size=11"};
+static const char *fonts[] = {"Iosevka:style:medium:size=10",
+                              "Fira Code iScript:style:medium:size=12",
+                              "Material Design Icons Desktop:size=10"};
 /*static const char *fonts[] = {*/
 /*    "Iosevka:style:medium:size=10",*/
 /*    "JetBrainsMono Nerd Font Mono:style:medium:size=8"};*/
