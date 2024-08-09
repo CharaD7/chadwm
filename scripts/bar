@@ -52,8 +52,8 @@ mem() {
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$black^ ^b$green^ 󰀂 ^d^%s" ;;
-	down) printf "^c$black^ ^b$red^ 󰯡 ^d^%s" ;;
+	up) printf "^c$black^ ^b$green^  󰤨 ^d^%s" ;;
+	down) printf "^c$black^ ^b$red^ 󰤭  ^d^%s" ;;
 	esac
 }
 
@@ -64,8 +64,8 @@ nettrafic() {
 
   case $BLOCK_BUTTON in
     1) setsid -f "$TERMINAL" -e bmon ;;
-    3) notify-send "🌐 Network traffic module" "󱚶: Traffic received
-    󱚺: Traffic transmitted" ;;
+    3) notify-send "🌐 Network traffic module" "🔻: Traffic received
+  🔺: Traffic transmitted" ;;
     6) "$TERMINAL" -e "$EDITOR" "$0" ;;
   esac
 
