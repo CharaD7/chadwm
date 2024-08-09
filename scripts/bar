@@ -52,8 +52,8 @@ mem() {
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$black^ ^b$green^  󰤨 ^d^%s" ;;
-	down) printf "^c$black^ ^b$red^ 󰤭  ^d^%s" ;;
+	up) printf "^c$black^ ^b$green^ 󰤨 ^d^%s" ;;
+	down) printf "^c$black^ ^b$red^ 󰤭 ^d^%s" ;;
 	esac
 }
 
@@ -84,7 +84,7 @@ nettrafic() {
   rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
   tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-  printf "^c$blue^ 🔻%4sB 🔺%4sB\\n" $(numfmt --to=iec $rx $tx)
+  printf "^c$blue^ ⬇️ %4sB ⬆️ %4sB\\n" $(numfmt --to=iec $rx $tx)
 }
 
 clock() {
