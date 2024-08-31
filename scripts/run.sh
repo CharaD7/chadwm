@@ -5,7 +5,7 @@ userName=$(echo $USER)
 xrdb merge ~/.Xresources
 
 # use `xrandr --query` to view a list of available displays`
-xrandr --output HDMI-1-1 --auto --left-of DP-1
+xrandr --output HDMI-1-1 --auto --left-of eDP-1
 # xrandr --output HDMI-0 --auto --left-of eDP-1-1
 
 xpad -h &
