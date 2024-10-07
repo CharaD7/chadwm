@@ -41,8 +41,7 @@ battery() {
 }
 
 brightness() {
-  printf "^c$black^ ^b$darkblue^ 󰃞 ^d^%s" "^c$blue^ $(cat /sys/class/backlight/*/brightness) "
-  # printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
+  printf "^c$red^%.0f\n" $(cat /sys/class/backlight/*/brightness)
 }
 
 mem() {
@@ -89,7 +88,7 @@ nettrafic() {
 
 clock() {
 	printf "^c$black^ ^b$darkblue^ 󰥔 "
-	printf "^c$black^^b$blue^ $(date)  "
+	printf "^c$black^^b$blue^ $(date '+%d-%m-%y (%a) +%H:%M')  "
   # printf "^c$black^ ^b$blue^ $(date '+(%a) %d-%m-%y %T')  "
 	# printf "^c$black^^b$blue^ $(date '+%H:%M')  "
 }
