@@ -25,7 +25,7 @@ pkg_updates() {
   if [ -z "$updates" ]; then
     printf "  ^c$green^ 󰦘  Fully Updated"
   else
-    printf "  ^c$black^ ^b$yellow^ 󰦗 ^d^%s" "^c$yellow^ $updates pkgs"
+    printf "  ^c$black^ 󰦗 ^d^%s" "^c$yellow^ $updates updates"
   fi
 }
 
