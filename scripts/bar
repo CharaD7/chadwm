@@ -55,12 +55,12 @@ mem() {
   printf "^c$blue^ ^b$grey^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
-wlan() {
-  case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-    up) printf "^c$black^ ^b$green^ 󰀂 ^d^%s" ;;
-    down) printf "^c$black^ ^b$red^ 󰯡 ^d^%s" ;;
-  esac
-}
+# wlan() {
+#   case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+#     up) printf "^c$black^ ^b$green^ 󰀂 ^d^%s" ;;
+#     down) printf "^c$black^ ^b$red^ 󰯡 ^d^%s" ;;
+#   esac
+# }
 
 nettrafic() {
   # Module showing network traffic. Shows how much data has been received (RX) or
