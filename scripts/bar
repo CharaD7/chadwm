@@ -25,18 +25,18 @@ pkg_updates() {
   if [ -z "$updates" ]; then
     printf "  ^c$green^ 󰦘  Fully Updated"
   else
-    printf "  ^c$black^ 󰦗 ^d^%s" "^c$yellow^ $updates updates"
+    printf "  ^c$yellow^ 󰦗 $updates updates"
   fi
 }
 
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
   case "$(cat /sys/class/power_supply/BAT1/status 2> /dev/null)" in
-    Discharging) printf "^c$black^ ^b$red^ 󰂃 ^d^%s" "^c$red^ $get_capacity%";;
-    "Not charging") printf "^c$black^ ^b$yellow^ 󰂃 ^d^%s" "^c$yellow^ $get_capacity%";;
-    Charging) printf "^c$black^ ^b$green^ 󱊥 ^d^%s" "^c$green^ $get_capacity%";;
-    Unknown) printf "^c$black^ ^b$red^ 󰂑 ^d^%s" "^c$red^ $get_capacity%";;
-    Full) printf "^c$black^ ^b$green^ 󱟢 ^d^%s" "^c$white^ $get_capacity%";;
+    Discharging) printf " ^c$red^   $get_capacity%";;
+    "Not charging") printf " ^c$yellow^   $get_capacity%";;
+    Charging) printf " ^c$green^   $get_capacity%";;
+    Unknown) printf " ^c$red^   $get_capacity%";;
+    Full) printf " ^c$white^   $get_capacity%";;
   esac
 }
 
