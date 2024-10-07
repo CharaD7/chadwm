@@ -1,0 +1,13 @@
+# chadwm compile files
+chadwm/dwm 
+chadwm/config.h 
+chadwm/*.o
+chadwm/*.orig
+chadwm/*.rej
+
+# ccls cache
+.ccls-cache/
+
+# neovide log and nohup
+neovide_backtraces.log
+nohup.out
