@@ -41,8 +41,13 @@ battery() {
 }
 
 brightness() {
-  printf "^c$blue^   "
-  printf "^c$blue^%.0f\n" $(cat /sys/class/backlight/*/brightness)
+  printf "^c$blue^  "
+  current_brightness = $(cat /sys/class/backlight/*/brightness)
+  max_brightness = $(cat /sys/class/backlight/*/max_brightness)
+  # calculate brightness percentage
+  brightness_percentage = $(echo "scale=2; ($current_brightness / $max_brightness) * 100" | bc )
+
+  printf "^c$blue^%.2f%%\n" "$brightness_percentage"
 }
 
 mem() {
