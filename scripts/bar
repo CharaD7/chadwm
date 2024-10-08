@@ -47,7 +47,8 @@ brightness() {
   # calculate brightness percentage
   brightness_percentage = $(echo "scale=2; ($max_brightness / $current_brightness) * 100" | bc)
 
-  printf "^c$blue^%.2f%%\n" "$brightness_percentage"
+  # printf "^c$green^󱚶:%4sB ^c$red^󱚺:%4sB\\n" $(numfmt --to=iec $rx $tx)
+  printf "^c$blue^$brightness_percentage%.2f%%\n"
 }
 
 mem() {
@@ -89,7 +90,11 @@ nettrafic() {
   rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
   tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-  printf "^c$green^󱚶:%4sB ^c$red^󱚺:%4sB\\n" $(numfmt --to=iec $rx $tx)
+  case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+    up) printf "^c$green^󱚶:%4sB ^c$red^󱚺:%4sB\\n" $(numfmt --to=iec $rx $tx);;
+    down) printf "^c$grey^ ^b$red^ 󰯡 ^b$grey^ ^c$red^ Disconnected^d^%s" ;;
+  esac
+  # printf "^c$green^󱚶:%4sB ^c$red^󱚺:%4sB\\n" $(numfmt --to=iec $rx $tx)
   # printf "^c$green^⬇️ %4sB ^c$red^⬆️ %4sB\\n" $(numfmt --to=iec $rx $tx)
 }
 
