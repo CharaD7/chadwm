@@ -40,12 +40,12 @@ battery() {
 }
 
 brightness() {
-  brightness_info = $(brightnessctl i)
+  brightness_info=$(brightnessctl i)
   printf "^c$blue^  "
   # calculate brightness percentage
-  brightness_percentage = $(echo "$brightness_info" | grep -oP '\(\K[0-9]+(?=%\))')
+  brightness_percentage=$(echo "$brightness_info" | grep -oP '\(\K[0-9]+(?=%\))')
 
-  printf "^c$blue^$brightness_percentage%.2f%%\n"
+  printf "^c$blue^$brightness_percentage%%\n"
 }
 
 mem() {
