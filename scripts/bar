@@ -32,11 +32,11 @@ pkg_updates() {
 battery() {
   get_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
   case "$(cat /sys/class/power_supply/BAT1/status 2> /dev/null)" in
-    Discharging) printf " ^c$red^  $get_capacity%";;
-    "Not charging") printf " ^c$yellow^  $get_capacity%";;
-    Charging) printf " ^c$green^  $get_capacity%";;
-    Unknown) printf " ^c$red^  $get_capacity%";;
-    Full) printf " ^c$white^  $get_capacity%";;
+    Discharging) printf " ^c$red^  $get_capacity%%";;
+    "Not charging") printf " ^c$yellow^  $get_capacity%%";;
+    Charging) printf " ^c$green^  $get_capacity%%";;
+    Unknown) printf " ^c$red^  $get_capacity%%";;
+    Full) printf " ^c$white^  $get_capacity%%";;
   esac
 }
 
@@ -45,7 +45,7 @@ brightness() {
   current_brightness = $(cat /sys/class/backlight/*/brightness)
   max_brightness = $(cat /sys/class/backlight/*/max_brightness)
   # calculate brightness percentage
-  brightness_percentage = $(echo "scale=2; ($current_brightness / $max_brightness) * 100" | bc )
+  brightness_percentage = $(echo "scale=2; ($max_brightness / $current_brightness) * 100" | bc)
 
   printf "^c$blue^%.2f%%\n" "$brightness_percentage"
 }
