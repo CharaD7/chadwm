@@ -2,7 +2,7 @@
 
 userName=$(echo $USER)
 
-xrdb merge ~/st/xresources
+# xrdb merge ~/st/xresources
 
 # use `xrandr --query` to view a list of available displays`
 xrandr --output HDMI-1-0 --auto --left-of eDP-1
