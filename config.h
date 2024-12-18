@@ -165,7 +165,7 @@ static const Key keys[] = {
 
     // keyboard backlight
     // keylight is a an alias for backlight located in the scripts directory
-    {MODKEY | Mod1Mask, XK_b, spawn, SHCMD("./scripts/backlight")},
+    {MODKEY | Mod1Mask, XK_b, spawn, SHCMD("backlight")},
 
     // screenshot fullscreen and cropped
     {MODKEY | ControlMask, XK_u, spawn,
