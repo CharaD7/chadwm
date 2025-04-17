@@ -37,11 +37,12 @@ static const int new_window_attach_on_end = 1; /*  1 means the new window will a
 #define ICONSIZE 22   /* icon size */
 #define ICONSPACING 3 /* space between icon and title */
 
-static const char *fonts[] = {"Iosevka:style:medium:size=10",
-                              "Fira Code iScript:style:medium:size=10"};
-/*static const char *fonts[] = {*/
-/*    "Iosevka:style:medium:size=10",*/
-/*    "JetBrainsMono Nerd Font Mono:style:medium:size=8"};*/
+// static const char *fonts[] = {"Iosevka:style:medium:size=10",
+//                               "Fira Code iScript:style:medium:size=10"};
+static const char *fonts[] = {
+    "Iosevka:style:medium:size=10",
+    // "Iosevka:style:medium:size=10",
+    "JetBrainsMono Nerd Font Mono:style:medium:size=8"};
 
 // theme
 /*#include "themes/onedark.h"*/
