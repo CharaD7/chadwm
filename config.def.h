@@ -40,9 +40,10 @@ static const int new_window_attach_on_end = 1; /*  1 means the new window will a
 // static const char *fonts[] = {"Iosevka:style:medium:size=10",
 //                               "Fira Code iScript:style:medium:size=10"};
 static const char *fonts[] = {
-    "Iosevka:style:medium:size=10",
     // "Iosevka:style:medium:size=10",
-    "JetBrainsMono Nerd Font Mono:style:medium:size=10"};
+    "JetBrainsMono Nerd Font:style:medium:size=10",
+    // "Iosevka:style:medium:size=10",
+    "JetBrainsMono Nerd Font:style:medium:size=10"};
 
 // theme
 /*#include "themes/onedark.h"*/
