@@ -2,7 +2,7 @@
 
 userName=$(echo $USER)
 
-xrdb merge ~/st/xresources
+xrdb merge ~/.config/st/xresources
 # xrdb merge ~/.Xresources
 
 # use `xrandr --query` to view a list of available displays`
