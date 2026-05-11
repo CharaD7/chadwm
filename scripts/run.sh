@@ -14,6 +14,9 @@ xpad -h &
 # Enable touchpad tapping
 xinput set-prop "GXTP5100:00 27C6:01E0 Touchpad" "libinput Tapping Enabled" 1 &
 
+# set UK keyboard layout
+setxkbmap -layout gb &
+
 chown $userName:$userName /sys/class/backlight/intel_backlight/brightness
 # compton &
 xset r rate 200 50 &
