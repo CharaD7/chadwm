@@ -190,6 +190,9 @@ static const Key keys[] = {
     {MODKEY, XK_i, incnmaster, {.i = +1}},
     {MODKEY, XK_d, incnmaster, {.i = -1}},
 
+		// lock the screen
+		{MODKEY | ControlMask, XK_v, spawn, SHCMD("slock")},
+
     // shift view
     {MODKEY, XK_Left, shiftview, {.i = -1}},
     {MODKEY, XK_Right, shiftview, {.i = +1}},
