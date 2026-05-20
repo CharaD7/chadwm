@@ -279,6 +279,8 @@ static const Key keys[] = {
     {MODKEY | ControlMask, XK_r, spawn, SHCMD("reboot")},
     // shutdown the machine
     {MODKEY | ControlMask, XK_s, spawn, SHCMD("shutdown now")},
+    // hibernate the machine
+    {MODKEY | ControlMask, XK_H, spawn, SHCMD("systemctl hibernate")},
 
     // span extended monitor display
     /* span left monitor display */
