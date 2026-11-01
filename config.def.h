@@ -33,20 +33,19 @@ static const char *downvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "-5%",
 static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL};
 static const char *light_up[] = {"/usr/bin/light", "-A", "5", NULL};
 static const char *light_down[] = {"/usr/bin/light", "-U", "5", NULL};
-static const int new_window_attach_on_end = 1; /*  1 means the new window will attach on the end; 0 means the new window will attach on the front,default is front */
-#define ICONSIZE 22   /* icon size */
+static const int new_window_attach_on_end = 0; /*  1 means the new window will attach on the end; 0 means the new window will attach on the front,default is front */
+#define ICONSIZE 18   /* icon size */
 #define ICONSPACING 3 /* space between icon and title */
 
-// static const char *fonts[] = {"Iosevka:style:medium:size=10",
-//                               "Fira Code iScript:style:medium:size=10"};
-static const char *fonts[] = {
-    // "Iosevka:style:medium:size=10",
-    "JetBrainsMono Nerd Font:style:medium:size=10",
-    // "Iosevka:style:medium:size=10",
-    "JetBrainsMono Nerd Font:style:medium:size=10"};
+static const char *fonts[] = {"Iosevka:style:medium:size=10",
+                              "Fira Code iScript:style:medium:size=11",
+                              "Material Design Icons Desktop:size=10"};
+/*static const char *fonts[] = {*/
+/*    "Iosevka:style:medium:size=10",*/
+/*    "JetBrainsMono Nerd Font Mono:style:medium:size=8"};*/
 
 // theme
-/*#include "themes/onedark.h"*/
+// #include "themes/onedark.h"
 #include "themes/catppuccin.h"
 
 static const char *colors[][3] = {
@@ -77,10 +76,12 @@ static char *tags[] = {"󰞷", "󰈹", "󰹼", "󱞊", "󱛉",
                        "󱃖", "󰐤", "󰀼", "󰅢"};
 
 static const char *eww[] = {"eww", "open", "eww", NULL};
+static const char *bitfarm_widget[] = {"/home/charad7/.config/chadwm/scripts/toggle_bitfarm_notif.sh", NULL};
 
 static const Launcher launchers[] = {
     /* command     name to display */
     {eww, "󰭛"},
+    {bitfarm_widget, "󰂚"},
 };
 
 static const int tagschemes[] = {SchemeTag1, SchemeTag2, SchemeTag3, SchemeTag4,
@@ -167,7 +168,7 @@ static const Key keys[] = {
 
     // keyboard backlight
     // keylight is a an alias for backlight located in the scripts directory
-    {MODKEY | Mod1Mask, XK_b, spawn, SHCMD("backlight")},
+    {MODKEY | Mod1Mask, XK_b, spawn, SHCMD("keylight")},
 
     // screenshot fullscreen and cropped
     {MODKEY | ControlMask, XK_u, spawn,
@@ -190,6 +191,9 @@ static const Key keys[] = {
     {MODKEY, XK_k, focusstack, {.i = -1}},
     {MODKEY, XK_i, incnmaster, {.i = +1}},
     {MODKEY, XK_d, incnmaster, {.i = -1}},
+
+		// lock the screen
+		{MODKEY | ControlMask, XK_v, spawn, SHCMD("slock")},
 
     // shift view
     {MODKEY, XK_Left, shiftview, {.i = -1}},
@@ -291,12 +295,20 @@ static const Key keys[] = {
     {MODKEY | ControlMask, XK_c, spawn, SHCMD("bubbly chat")},
     /* span the keystrokes display */
     {MODKEY | ControlMask, XK_k, spawn, SHCMD("bubbly keystrokes")},
+    // Close bubbly chat instance
+    {MODKEY | ControlMask | ShiftMask, XK_c, spawn,
+     SHCMD("eww -c ~/.local/share/bubbly/bubbles close bubbly")},
+    // Close bubbly keystrokes instance
+    {MODKEY | ControlMask | ShiftMask, XK_k, spawn,
+     SHCMD("eww -c ~/.local/share/bubbly/keystrokes close keystrokes")},
     // Open flatpak's smile
     // {MODKEY | ControlMask, XK_., spawn, SHCMD("flatpak run it.mijorus.smile")},
     // Toggle menu bar
     // {MODKEY | ControlMask, XK_m, togglebar, {0}},
     {MODKEY | Mod1Mask, XK_m, spawn,
      SHCMD("~/.config/chadwm/scripts/toggle_menu.sh")},
+    // Toggle BitFarm notifications widget
+    {MODKEY | ShiftMask, XK_n, spawn, {.v = bitfarm_widget}},
 };
 
 /* button definitions */
