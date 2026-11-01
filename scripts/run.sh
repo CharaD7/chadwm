@@ -25,6 +25,7 @@ picom &
 ~/.config/chadwm/scripts/wal &
 dunst & # Add notification daemon to startup
 flameshot & # A screen capture utility
+eww daemon & # Eww widget daemon
 
 ~/.config/chadwm/scripts/bar &
 dwm 2> ~/dwm.log

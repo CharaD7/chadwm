@@ -76,10 +76,12 @@ static char *tags[] = {"󰞷", "󰈹", "󰹼", "󱞊", "󱛉",
                        "󱃖", "󰐤", "󰀼", "󰅢"};
 
 static const char *eww[] = {"eww", "open", "eww", NULL};
+static const char *bitfarm_widget[] = {"/home/charad7/.config/chadwm/scripts/toggle_bitfarm_notif.sh", NULL};
 
 static const Launcher launchers[] = {
     /* command     name to display */
     {eww, "󰭛"},
+    {bitfarm_widget, "󰂚"},
 };
 
 static const int tagschemes[] = {SchemeTag1, SchemeTag2, SchemeTag3, SchemeTag4,
@@ -307,6 +309,8 @@ static const Key keys[] = {
     // {MODKEY | ControlMask, XK_m, togglebar, {0}},
     {MODKEY | Mod1Mask, XK_m, spawn,
      SHCMD("~/.config/chadwm/scripts/toggle_menu.sh")},
+    // Toggle BitFarm notifications widget
+    {MODKEY | ShiftMask, XK_n, spawn, {.v = bitfarm_widget}},
 };
 
 /* button definitions */
