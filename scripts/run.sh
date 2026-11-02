@@ -12,7 +12,7 @@ xrandr --output HDMI-1-1 --auto --left-of eDP-1
 xpad -h &
 
 # Enable touchpad tapping
-xinput set-prop "GXTP5100:00 27C6:01E0 Touchpad" "libinput Tapping Enabled" 1 &
+~/.config/chadwm/scripts/touch &
 
 # set UK keyboard layout
 setxkbmap gb
