@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Stop on errors
+set -e
+
+xinput set-prop 11 "libinput Tapping Enabled" 1
